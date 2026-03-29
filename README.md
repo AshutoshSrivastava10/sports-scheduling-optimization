@@ -73,10 +73,8 @@ This repository includes:
 
 - `your_notebook_name.ipynb` – main optimization notebook with model formulation and implementation
 - `schedule_WSL.txt` – final submitted schedule in required `HOME AWAY WEEK` format
-- `AshutoshS_SportsScheduling.pdf` – project report with formulation, constraints, results, and discussion
+- `ProjectReport_SportsScheduling.pdf` – project report with formulation, constraints, results, and discussion
 - `WSL_Scheduling_Optimization_Ashutosh_Srivastava.pptx` – presentation summarizing the business problem, model, and outcomes
-
-> Replace `your_notebook_name.ipynb` above with the exact notebook filename in your repo.
 
 ---
 
