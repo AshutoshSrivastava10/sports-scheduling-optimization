@@ -1,38 +1,119 @@
 # Sports Scheduling Optimization
 
-Optimization-based scheduling for the Worldwide Softball League (WSL) using Mixed-Integer Linear Programming (MILP) in Python with Gurobi.
+This project develops an optimization-based schedule for the fictitious Worldwide Softball League (WSL) using Mixed-Integer Linear Programming (MILP) in Python with Gurobi.
 
-## Overview
-This project builds a 9-week schedule for a 12-team league while satisfying hard constraints on divisional play, home/away balance, bye weeks, and travel patterns. The model also improves travel fairness and separates marquee TV matchups across different weeks.
+The goal was to build a 9-week schedule for a 12-team league while satisfying hard scheduling rules and improving travel efficiency, fairness, and weekly broadcast value.
 
-## Business Problem
-Sports leagues face trade-offs between travel cost, schedule fairness, and broadcast value. This project converts those rules into a solvable MILP and generates a validated schedule.
+---
 
-## Approach
-- Formulated the problem as a MILP with binary game-week-location variables
-- Enforced league structure, home/away balance, and travel-pattern constraints
-- Added fairness and broadcast considerations in the optimization
-- Solved the model in Python using Gurobi
+## Project Overview
 
-## Results
-- Total away-team travel: 35,125 miles
-- Travel spread: 1,050 miles
-- Zero back-to-back away sequences
-- All marquee matchups scheduled in distinct weeks
+The league consists of 12 teams split into two divisions:
 
-## Tech Stack
-Python, Gurobi, MILP, Optimization, Scheduling
+- **North:** CAN, ICE, SWE, RUS, DEN, JAP
+- **South:** ANT, AUS, CHI, ARG, TAH, FIJ
 
-## Repository Structure
-- `src/` -> optimization code
-- `outputs/` -> final schedule text file
-- `reports/` -> full project report
-- `slides/` -> presentation deck
+Each team must:
 
-## How to Run
-1. Install dependencies
-2. Run the scheduler script
-3. Review the generated schedule output
+- Play **8 total games**
+- Have **4 home games, 4 away games, and 1 bye**
+- Play **all 5 divisional opponents exactly once**
+- Play **3 cross-division opponents**
+- Avoid bad away-game patterns
+
+In addition to feasibility, the model tries to:
+
+- Minimize total travel
+- Improve travel fairness across teams
+- Spread marquee TV matchups across different weeks
+
+---
+
+## Optimization Approach
+
+I formulated the problem as a **Mixed-Integer Linear Program (MILP)** with binary decision variables representing:
+
+- who plays whom
+- where the game is played
+- in which week the game is scheduled
+
+The model includes:
+
+- league structure constraints
+- home/away balance constraints
+- cross-division scheduling rules
+- travel-pattern restrictions
+- fairness terms in the objective
+- TV matchup separation constraints
+
+The model was implemented in **Python** and solved using **Gurobi**.
+
+---
+
+## Key Results
+
+The final schedule achieved:
+
+- **Total away-team travel:** 35,125 miles
+- **Travel spread (max - min):** 1,050 miles
+- **Zero back-to-back away sequences**
+- **All marquee matchups scheduled in distinct weeks**
+
+Example marquee weeks:
+- Week 2: TAH vs FIJ
+- Week 3: CHI vs ARG
+- Week 7: SWE vs DEN
+- Week 8: ANT vs AUS
+
+---
+
+## Files in This Repository
+
+This repository includes:
+
+- `your_notebook_name.ipynb` – main optimization notebook with model formulation and implementation
+- `schedule_WSL.txt` – final submitted schedule in required `HOME AWAY WEEK` format
+- `AshutoshS_SportsScheduling.pdf` – project report with formulation, constraints, results, and discussion
+- `WSL_Scheduling_Optimization_Ashutosh_Srivastava.pptx` – presentation summarizing the business problem, model, and outcomes
+
+> Replace `your_notebook_name.ipynb` above with the exact notebook filename in your repo.
+
+---
+
+## Tools and Skills Used
+
+- Python
+- Gurobi
+- Mixed-Integer Linear Programming (MILP)
+- Optimization Modeling
+- Scheduling
+- Constraint Modeling
+
+---
+
+## Why This Project Matters
+
+Sports scheduling is a strong example of how optimization can support real operational decisions.
+
+This project shows how vague business rules can be converted into a mathematical model and solved in a way that balances:
+
+- operational feasibility
+- cost reduction
+- fairness
+- stakeholder preferences
+
+It reflects the kind of structured decision-making used in sports analytics, airline planning, logistics, and operations research.
+
+---
 
 ## Author
-Ashutosh Srivastava
+
+**Ashutosh Srivastava**  
+M.S. in Industrial & Systems Engineering  
+Virginia Tech
+
+---
+
+## Notes
+
+This project was developed as part of an academic optimization project and is shared here as a portfolio example of mathematical modeling and decision optimization.
