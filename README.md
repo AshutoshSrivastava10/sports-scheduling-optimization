@@ -71,7 +71,7 @@ Example marquee weeks:
 
 This repository includes:
 
-- `your_notebook_name.ipynb` – main optimization notebook with model formulation and implementation
+- `SportsSchedulingWSL.ipynb` – main optimization notebook with model formulation and implementation
 - `schedule_WSL.txt` – final submitted schedule in required `HOME AWAY WEEK` format
 - `ProjectReport_SportsScheduling.pdf` – project report with formulation, constraints, results, and discussion
 - `WSL_Scheduling_Optimization_Ashutosh_Srivastava.pptx` – presentation summarizing the business problem, model, and outcomes
