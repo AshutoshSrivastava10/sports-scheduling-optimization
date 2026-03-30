@@ -67,6 +67,21 @@ Example marquee weeks:
 
 ---
 
+## Results Snapshot
+
+This optimization model produced a feasible 9-week schedule while improving travel efficiency, fairness, and broadcast quality.
+
+### Estimated Savings vs Baseline
+![Estimated Savings vs Baseline](savings-vs-baseline.png)
+
+### KPI Summary
+![KPI Summary](kpi-summary.png)
+
+### Final Schedule Structure
+![Final WSL Schedule Graph](schedule-graph.png)
+
+---
+
 ## Files in This Repository
 
 This repository includes:
